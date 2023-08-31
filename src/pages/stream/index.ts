@@ -11,6 +11,7 @@ export const GET: APIRoute = () => {
       }, 1000);
     },
     cancel() {
+      console.log("client disconnected");
       clearInterval(timer);
     },
   });
