@@ -7,7 +7,8 @@ export const GET: APIRoute = () => {
     start(controller) {
       timer = setInterval(() => {
         const message = `Hello World: ${new Date()}`;
-      });
+        controller.enqueue(new TextEncoder().encode(message));
+      }, 1000);
     },
     cancel() {
       clearInterval(timer);
